@@ -1,0 +1,15 @@
+# == Schema Information
+#
+# Table name: offereds
+#
+#  id         :bigint           not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  course_id  :integer
+#
+
+one:
+  course_id: 1
+
+two:
+  course_id: 1

@@ -1,0 +1,27 @@
+<h1>Users List</h1>
+<div class="col text-center">
+<%= link_to "Add User", new_root_url,class: "btn btn-secondary" %>
+<%= link_to "Add Courses", courses_index_url, class: "btn btn-secondary" %>
+<%= link_to "Enrolments", enrolments_index_url, class: "btn btn-secondary" %>
+</div>
+
+
+<% @user.each do |c| %>
+<div class="container">
+<div class="p-3 mb-2 bg-light text-dark"> 
+	<div class="row">
+Email: <%=c.email%></div>
+<div class="row">
+Role: <%=c.role%></div>
+
+</div>
+</div>
+
+<% end %>
+
+
+
+
+
+
+

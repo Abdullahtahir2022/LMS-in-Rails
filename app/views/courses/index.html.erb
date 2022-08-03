@@ -1,0 +1,26 @@
+<h1>Courses List</h1>
+
+<% @course.each do |c| %>
+<div class="container">
+<div class="p-3 mb-2 bg-light text-dark"> 
+	<div class="row">
+Name: <%= c.name %> </div>
+
+<div class="row">
+Course Code: <%= c.course_code %> </div>
+
+
+<% c.teachers.each do |t| %>
+<div class="row">Teacher: <%= t.name %></div>
+<% end %>
+</div>
+</div>
+
+<% end %>
+<div class="col text-center">
+<%= link_to "Back", roots_path, class: "btn btn-secondary" %>
+<%= link_to "Add", courses_new_url, class: "btn btn-secondary"  %>
+
+</div>
+
+

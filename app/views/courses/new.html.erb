@@ -1,0 +1,31 @@
+<h1>Add Courses</h1>
+
+<%= form_with model: @course, url: add_course_path do |form| %>
+<div>
+
+<%= form.label :teacher %> 
+<div class= "dropdown"><%= form.select :id, @teacher.map { |t| [t.name,t.id] }%> </div>
+
+</div>
+
+
+<div class="form-group">
+<%= form.label :name %>
+<%= form.text_field :name, class: "form-control"%>
+</div>
+
+<div class="form-group">
+<%= form.label :course_code %>
+<%= form.text_field :course_code, class: "form-control" %>
+</div>
+
+</div>
+
+<div>
+<%= form.submit class: "btn btn-secondary" %>
+<%= link_to "Back", courses_index_url, class: "btn btn-secondary" %>
+</div>
+
+<% end %>
+
+

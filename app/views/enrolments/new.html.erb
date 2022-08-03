@@ -1,0 +1,23 @@
+<h1>Enrol</h1>
+
+<%= form_with model: @enrolments, url: add_enrolment_path do |form| %>
+	<div> 
+Student:	   <%= form.select :student_id, @student.map { |s| [s.name,s.id] } %>
+	</div>
+	
+	 	<div>
+	  	   <%= form.select :course_id, @course.map { |c| [ c.name,c.id]}%>
+
+	
+	</div>
+
+
+
+<div>
+<%= form.submit class: "btn btn-secondary" %>
+<%= link_to "Back", enrolments_index_url, class: "btn btn-secondary" %>
+</div>
+
+<% end %>
+
+
